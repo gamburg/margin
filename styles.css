@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Lab Mono';
+  src:  url('assets/fonts/labmono-regular-web.woff2') format('woff2'),
+        url('assets/fonts/labmono-regular-web.woff') format('woff');
+}
+
+
+
+body {
+
+	font-family: 'Lab Mono', 'Courier', monospace;
+}
+
+h2 {
+	font-weight: normal;
+}
+
+.cover-main img {
+	width: 70px;
+}
+
+section.cover .cover-main > p:last-child a,
+section.cover .cover-main > p:last-child a:last-child {
+	border: none;
+	background: none;
+	color: inherit;
+	text-decoration: underline;
+}
+
+section.cover ul {
+	max-width: none;
+}

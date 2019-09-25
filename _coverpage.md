@@ -1,0 +1,17 @@
+<!--![logo](assets/img/logo.png)-->
+
+# &#8857;
+# Margin
+
+## Lightweight markup designed for an open mind
+
+- The plain text language for list-making, note-taking, and to-dos.
+- Allows thinkers to determine their own organizational models.
+- Infinitely extensible while remaining human-readable.
+
+<!--[GitHub &#8594;](https://github.com/gamburg/margin/)-->
+[Learn Margin &#8594;](#philosophy)
+
+<!-- background color -->
+
+![color](#f0f0f0)
