@@ -101,7 +101,7 @@ Shirt
   Sleeves
   Buttons
 Pants
-  Pant Legs
+  Belt loop
   Pockets
 Shoes
   Tongue
