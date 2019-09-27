@@ -16,17 +16,17 @@ Favorite Movies
 
 [Is equivalent to...]
 
-** Favorite Movies: **
+Favorite Movies:
   - Eyes Wide Shut
   - Black Narcissus
   - Adaptation
 
 [Is equivalent to...]
 
-__Favorite Movies__
-    * Eyes Wide Shut
-    * Black Narcissus
-    * Adaptation
+** Favorite Movies **
+    > Eyes Wide Shut
+    > Black Narcissus
+    > Adaptation
 ```
 
 This allows the thinker to adopt whatever visual grammar they prefer.
@@ -56,7 +56,7 @@ Margin aims to shepherd apps away from the tendency to overcomplicate and over-d
 
 ### Points of frustration that led to Margin {docsify-ignore}
 
-There are plenty of well-known, powerful applications that force their own organizational philosophy onto the user. And there's nothing inherently wrong with that.
+There are plenty of well-known, powerful applications that force their own organizational philosophy on the user. And there's nothing inherently wrong with that.
 
 Nevertheless, when an application's user-facing models of thought...
   1. cannot be easily mapped to the the user's own mental models, or
@@ -191,6 +191,20 @@ Coming Soon [filter: release date is after today]
 ```
 An application may use the specified query to filter for certain nodes under certain conditions of interaction. For most applications, the default filter for a given task (when no filter is specified) would be that task's children. But this is outside the scope of the markup language itself.
 
+### Document Parent
+Every Margin document has an implied document parent, an item that parents every top-level item in the document. This item can also have annotations, which can be useful as document-level meta data. These annotations are be defined as the first apparently parentless annotation in the document:
+```margin
+[Kid Reader Pro]
+[Reader Name: Kit Mapache]
+
+Read:
+ - The Phantom Tollbooth
+ - A Wrinkle in Time
+ - Charlotte's Web
+
+Unread:
+ - Where the Wild Things Are
+```
 
 # Examples
 
