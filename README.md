@@ -267,3 +267,7 @@ To Do:
 - Margin is not an app, but a markup language.
 - Margin is heirarchically less prescriptive than TaskPaper. Where TaskPaper splits items into `projects`, `tasks`, and `notes`, Margin sees only items. A top-level item in Margin *could* be considered a project, but it could also just as easily be considered a list, a note, a task, a chapter, an employee, an index, etc. 
 - Margin is syntactically less prescriptive than [TaskPaper's formatting](https://guide.taskpaper.com/getting-started/). TaskPaper categorizes items by their ornamentation (`projects` end with a colon, `tasks` begin with a dash, and `notes` must not fall into either of those two categories). Margin intentionally avoids such definitions, allowing the user to ornament (or not) plain text in nearly any format they prefer.
+
+**Where can I send feedback?**
+
+Please submit any feedback as an issue on [Margin's public GitHub repository](https://github.com/gamburg/margin/issues).
