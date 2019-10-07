@@ -73,7 +73,7 @@ I use and love all of the above applications. Their specialization is their stre
 
 In this respect, Margin promotes a common sense approach to modeling thought: simply place the thinker's preferences first. 
 
-This approach begins with a flexible plain text standard. After that, it is the application's job improve the thinker's experience through specialized tools and prescriptive user-facing models -- as long as the underlying source material remains portable and human-readable.
+This approach begins with a flexible plain text standard. After that, it is the application's job to improve the thinker's experience through specialized tools and prescriptive user-facing models -- as long as the underlying source material remains portable and human-readable.
 
 Margin is free and open-source.
 
