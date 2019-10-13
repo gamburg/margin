@@ -138,6 +138,14 @@ Items:
   - Item C
       [I belong to Item C]
 ```
+Because attributes cannot have children, an indented item following an attribute is considered that attribute's parent:
+```margin
+Items:
+  - Item Y
+        [I belong to Item Y]
+  - [I belong to Item Z]
+  		Item Z
+```
 Escape an annotation with a backslash
 ```margin
 This is an item \[but this is not an annotation]
