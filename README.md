@@ -138,7 +138,7 @@ Items:
   - Item C
       [I belong to Item C]
 ```
-Because attributes cannot have children, an indented item following an attribute is considered that attribute's parent:
+Because annotations cannot have children, an indented item following an annotation is considered that annotation's parent:
 ```margin
 Items:
   - Item Y
