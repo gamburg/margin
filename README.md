@@ -83,8 +83,6 @@ Margin is free and open-source.
 
 Margin employs an ordered tree data structure whose nodes are called items. Indentation forms the basis of the syntax.
 
-!> To view this document in well-structured Margin, click here (not yet implemented).
-
 ## Items
 
 Each line represents an item.
