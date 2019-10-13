@@ -130,13 +130,13 @@ The Crying of Lot 49
    [publication year: 1966]
    [publisher: J. B. Lippincott & Co.]
 ```
-An annotation is the child of any inline, non-annotation item. If no such item exists, an annotation is the child of the preceding non-annotation item:
+An annotation is the child of any inline, non-annotation item.
 ```margin
 Items:
   - Item A
   - [I belong to Item B] Item B [I also belong to Item B]
   - Item C
-  [I belong to Item C]
+      [I belong to Item C]
 ```
 Escape an annotation with a backslash
 ```margin
