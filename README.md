@@ -59,7 +59,7 @@ Margin aims to shepherd apps away from the tendency to overcomplicate and over-d
 There are plenty of well-known, powerful applications that force their own organizational philosophy on the user. And there's nothing inherently wrong with that.
 
 Nevertheless, when an application's user-facing models of thought...
-  1. cannot be easily mapped to the the user's own mental models, or
+  1. cannot be easily mapped to the user's own mental models, or
   2. are not justified for the user,
 
 it can lead to frustration. For example:
