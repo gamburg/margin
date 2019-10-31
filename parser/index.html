@@ -6,11 +6,38 @@
   <title></title>
 
   <meta name="theme-color" content="#fafafa">
+
+  <style>
+
+    @font-face {
+      font-family: 'Lab Mono';
+      src:  url('../assets/fonts/labmono-regular-web.woff2') format('woff2'),
+            url('../assets/fonts/labmono-regular-web.woff') format('woff');
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Lab Mono', 'Courier', monospace;
+    }
+
+    textarea {
+      font-family: inherit;
+      height: 100%;
+      width: 45%;
+    }
+
+  </style>
+
 </head>
 
 <body>
 
-  <textarea rows="100" cols="200"></textarea>
+  <textarea class="input">Parent
+ Child
+  Grandchild
+   Great Grandchild
+ Child</textarea>
+  <textarea class="output" readonly></textarea>
   
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/TreeModel.js"></script>

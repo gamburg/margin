@@ -1,14 +1,16 @@
-marginInputText = `Parent
- Child
-  Grandchild
-   Great Grandchild
- Child`;
+jQuery( document ).ready(function() {
+    var input_area = jQuery("textarea.input");
+    var output_area = jQuery("textarea.output");
+    
+    input_area.on('change keyup paste', function() {
+    	output_area.val( get_converted_text( input_area.val(), "json" ) );
+	}).triggerHandler('change');
 
-var sampleTree = new MarginTree();
-var root = sampleTree.parse( get_margin_item(marginInputText) );
+});
 
-printOutput(JSON.stringify(root.model, null, 5)); // Parsed Margin
+function get_converted_text( input_text, output_format ) {
+	var sampleTree = new MarginTree();
+	var root = sampleTree.parse( get_margin_item(input_text) );
 
-function printOutput( output ) {
-	jQuery("textarea").append(output + "\n");
+	return JSON.stringify(root.model, null, 5);
 }

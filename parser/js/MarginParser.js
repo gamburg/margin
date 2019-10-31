@@ -49,11 +49,11 @@ function get_top_level_text( text_tree ) {
 
 function get_margin_text_from_line_array( lines ) {
 
- 	var child_texts = []; 						//[" Child1"]
-	var current_indentation = null; 			// null, 1, 1
-	var current_child_text = "";  				// "", " Child1", " Child2"
+ 	var child_texts = [];
+	var current_indentation = null;
+	var current_child_text = "";
 
-	for(var i = 0; i < lines.length; i++) { 	//i = 0, 1
+	for(var i = 0; i < lines.length; i++) {
 		if( !current_indentation ) {
 			current_indentation = get_line_indentation_number( lines[i] );
 			current_child_text += lines[i];
@@ -71,8 +71,6 @@ function get_margin_text_from_line_array( lines ) {
 	if(current_child_text) {
 		child_texts.push( current_child_text );
 	}
-
-	console.log(child_texts);
 
  	return child_texts;
 }
