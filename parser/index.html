@@ -18,16 +18,43 @@
     html, body {
       height: 100%;
       font-family: 'Lab Mono', 'Courier', monospace;
+      margin: 0;
     }
 
     textarea {
       font-family: inherit;
+      font-size: .8em;
       height: 100%;
-      width: 45%;
-      
+      width: 100%;
+
+      padding: 0;
+      border: none;
+      outline: none;
+
       -moz-tab-size : 4;
       -o-tab-size : 4;
       tab-size : 4;
+    }
+
+    h2 {
+      font-size:1.1em;
+      font-weight: inherit;
+    }
+
+    .light {
+      background: #f6f5f5;
+      color: #33313b;
+    }
+
+    .dark {
+      background: #33313b;
+      color: #f6f5f5;
+    }
+
+    div {
+      display: inline-block;
+      height: 100%;
+      width: 50%;
     }
 
   </style>
@@ -36,12 +63,17 @@
 
 <body>
 
-  <textarea class="input">Parent
- Child
-  Grandchild
-   Great Grandchild
- Child</textarea>
-  <textarea class="output" readonly></textarea>
+  <div>
+    <h2>Margin</h2>
+    <textarea class="input light">Parent
+   Child
+    Grandchild
+     Great Grandchild
+   Child</textarea>
+  </div><div>
+    <h2>JSON</h2>
+    <textarea class="output dark" readonly></textarea>
+  </div>
   
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/TreeModel.js"></script>
