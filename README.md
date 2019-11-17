@@ -198,7 +198,7 @@ Coming Soon [filter: release date is after today]
 An application may use the specified query to filter for certain nodes under certain conditions of interaction. For most applications, the default filter for a given task (when no filter is specified) would be that task's children. But this is outside the scope of the markup language itself.
 
 ### Document Parent
-Every Margin document has an implied document parent, an item that parents every top-level item in the document. This item can also have annotations, which can be useful as document-level meta data. These annotations are be defined as the first apparently parentless annotation in the document:
+Every Margin document has an implied document parent, an item that parents every top-level item in the document. This item can also have annotations, which can be useful as document-level meta data. These annotations are defined as the first apparently parentless annotation in the document:
 ```margin
 [Kid Reader Pro]
 [Reader Name: Kit Mapache]
