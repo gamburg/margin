@@ -1,9 +1,27 @@
 class MarginTree extends TreeModel {
 }
-
+/*
 function MarginItem( raw_data ) {
 	this.raw_data = raw_data;
+	this.value = "val";
 	this.children = [];
+}
+*/
+class MarginItem {
+	
+	constructor( raw_data ) {
+		this.raw_data = raw_data;
+		this.value = this.get_value();
+		this.children = [];
+	}
+
+	get_value() {
+		// leading characters regex:  /^([-_> ])*/g;
+		// trailing characters regex: /(([-_>* ])+$)/g;
+		var regex_trim_these = /(^([-_>* ])*)|(([-_>* ])+$)/g;
+		return this.raw_data.replace( regex_trim_these, '');
+	}
+ // function get_value
 }
 
 function get_margin_item( text ) {
