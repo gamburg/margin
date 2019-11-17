@@ -12,16 +12,27 @@ class MarginItem {
 	constructor( raw_data ) {
 		this.raw_data = raw_data;
 		this.value = this.get_value();
+		this.attributes = this.get_attributes();
 		this.children = [];
 	}
 
 	get_value() {
 		// leading characters regex:  /^([-_> ])*/g;
 		// trailing characters regex: /(([-_>* ])+$)/g;
+		// attributes regex = ??????? // <-----TODO
 		var regex_trim_these = /(^([-_>* ])*)|(([-_>* ])+$)/g;
 		return this.raw_data.replace( regex_trim_these, '');
 	}
- // function get_value
+
+	get_attributes() {
+		// bracketed segments regex: /\[(?:[^\]\[]+|\[(?:[^\]\[]+|\[[^\]\[]*\])*\])*\]/g
+		var regex_attributes = /\[(?:[^\]\[]+|\[(?:[^\]\[]+|\[[^\]\[]*\])*\])*\]/g;
+		var attributes = this.raw_data.match( regex_attributes );
+		if( attributes ) return attributes;
+		return [];
+		//return this.raw_data.match( regex_attributes );
+		//return this.raw_data.replace( regex_attributes, '');
+	}
 }
 
 function get_margin_item( text ) {
