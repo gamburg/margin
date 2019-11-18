@@ -12,26 +12,41 @@ class MarginItem {
 	constructor( raw_data ) {
 		this.raw_data = raw_data;
 		this.value = this.get_value();
-		this.attributes = this.get_attributes();
+		this.annotations = this.get_annotations();
 		this.children = [];
 	}
 
 	get_value() {
 		// leading characters regex:  /^([-_> ])*/g;
 		// trailing characters regex: /(([-_>* ])+$)/g;
-		// attributes regex = ??????? // <-----TODO
+		// annotations regex = ??????? // <-----TODO
 		var regex_trim_these = /(^([-_>* ])*)|(([-_>* ])+$)/g;
 		return this.raw_data.replace( regex_trim_these, '');
 	}
 
-	get_attributes() {
+	get_annotations() {
 		// bracketed segments regex: /\[(?:[^\]\[]+|\[(?:[^\]\[]+|\[[^\]\[]*\])*\])*\]/g
-		var regex_attributes = /\[(?:[^\]\[]+|\[(?:[^\]\[]+|\[[^\]\[]*\])*\])*\]/g;
-		var attributes = this.raw_data.match( regex_attributes );
-		if( attributes ) return attributes;
-		return [];
-		//return this.raw_data.match( regex_attributes );
-		//return this.raw_data.replace( regex_attributes, '');
+		var annotations = {};
+		var key_value_separator = ':';
+		var regex_annotations = /\[(?:[^\]\[]+|\[(?:[^\]\[]+|\[[^\]\[]*\])*\])*\]/g;
+		var raw_annotations = this.raw_data.match( regex_annotations );
+
+		if( raw_annotations ) {
+			raw_annotations.forEach(function( raw_annotation ) {
+				var key;
+				var value = null;
+				var raw_annotation_unwrapped = raw_annotation.slice(1,-1); // remove [ & ]
+				var key_value_separator_index = raw_annotation_unwrapped.indexOf( key_value_separator );
+				if( key_value_separator_index < 0 ) { // no annotation separator found
+					key = raw_annotation_unwrapped;
+				} else {
+					key = raw_annotation_unwrapped.substring(0, key_value_separator_index);
+					value = raw_annotation_unwrapped.substring(key_value_separator_index + 1, raw_annotation_unwrapped.length);
+				}
+				annotations[key] = value;// <-------- TODO: assign annotation's value to annotation's key(not currently functioning)
+			});
+		}
+		return annotations;
 	}
 }
 
