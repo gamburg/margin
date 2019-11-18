@@ -1,12 +1,6 @@
 class MarginTree extends TreeModel {
 }
-/*
-function MarginItem( raw_data ) {
-	this.raw_data = raw_data;
-	this.value = "val";
-	this.children = [];
-}
-*/
+
 class MarginItem {
 	
 	constructor( raw_data ) {
