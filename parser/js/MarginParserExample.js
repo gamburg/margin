@@ -2,37 +2,33 @@ jQuery( document ).ready(function() {
     var input_area = jQuery('.input');
     var output_area = jQuery('.output');
     var ouput_select = jQuery('input[type=radio]');
+    var update_triggers = jQuery('.input, .output, input[type=radio]');
+    var output_radio_selector = 'input[name="output"]:checked';
 
     make_textarea_margin_friendly( input_area );
-    //update_output_on_change( input_area, output_area, input_area, ouput_select );
-    
-    input_area.on('change keyup paste', function() {
-    	var output_format = get_output_format();
-    	var display_format = get_display_format();
-    	if( display_format === 'html' ) {
-    		output_area.html( get_converted_text( input_area.val(), output_format ) );
-    	} else {
-    		output_area.text( get_converted_text( input_area.val(), output_format ) );
-    	}	
-	}).triggerHandler('change');
-
-	ouput_select.on('change', function() {
-		var output_format = get_output_format();
-		var display_format = get_display_format();
-    	if( display_format === 'html' ) {
-    		output_area.html( get_converted_text( input_area.val(), output_format ) );
-    	} else {
-    		output_area.text( get_converted_text( input_area.val(), output_format ) );
-    	}
-	});
+    update_output_on_change( update_triggers, input_area, output_area, output_radio_selector );
 });
 
-function get_output_format() {
-	return document.querySelector('input[name="output"]:checked').value;
+function update_output_on_change( update_triggers, input_area, output_area, output_radio_selector ) {
+	update_triggers.on('change keyup paste', function() {
+		var converted_text = get_converted_text( input_area.val(), get_output_format( output_radio_selector ) );
+		switch( get_display_format(output_radio_selector) ) {
+			case 'html':
+				output_area.html( converted_text );
+			break;
+			case 'text':
+				output_area.text( converted_text );
+			break;
+		}
+	}).triggerHandler('change');
 }
 
-function get_display_format() {
-	return document.querySelector('input[name="output"]:checked').dataset.display;
+function get_output_format( selector ) {
+	return document.querySelector(selector).value;
+}
+
+function get_display_format( selector ) {
+	return document.querySelector(selector).dataset.display;
 }
 
 function get_converted_text( input_text, output_format ) {
