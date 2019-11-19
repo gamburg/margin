@@ -21,7 +21,7 @@
       margin: 0;
     }
 
-    textarea {
+    .input, .output {
       font-family: inherit;
       font-size: .8em;
       height: 100%;
@@ -38,6 +38,18 @@
       -moz-tab-size : 4;
       -o-tab-size : 4;
       tab-size : 4;
+    }
+
+    .input {
+      float: left;
+    }
+
+    .output {
+      float: right;
+    }
+
+    input[type="radio"]:checked+label {
+      font-weight: bold;
     }
 
     h2 {
@@ -70,17 +82,17 @@
   <div>
     <h2>Input</h2>
     <input type="radio" id="shopping_list" name="input" value="shopping_list" checked="checked"><label for="shopping_list">Shopping</label>
-    <textarea class="input light">Parent
+    <textarea class="input light" autofocus>Parent
    Child
     Grandchild
      Great [Grand]c[hi]ld
    Child</textarea>
   </div><div>
     <h2>Output</h2>
-    <input type="radio" id="json" name="output" value="json" checked="checked"><label for="json">JSON</label>
+    <input type="radio" id="pretty" name="output" value="pretty" checked="checked"><label for="pretty">Pretty</label>
+    <input type="radio" id="json" name="output" value="json"><label for="json">JSON</label>
     <input type="radio" id="markdown" name="output" value="markdown"><label for="markdown">Markdown</label>
-    <input type="radio" id="pretty" name="output" value="pretty"><label for="pretty">To Do List</label>
-    <textarea class="output dark" readonly></textarea>
+    <div class="output dark"></div>
   </div>
   
   <script src="js/jquery-3.4.1.min.js"></script>

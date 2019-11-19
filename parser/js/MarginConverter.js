@@ -9,7 +9,7 @@ function convert_margin( root, output_format ) {
 		break;
 
 		case 'pretty':
-			return 'todo output here';
+			return '<input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>';
 		break;
 	}
 	return null;
