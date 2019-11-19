@@ -18,6 +18,10 @@ class MarginItem {
 		return this.raw_data.replace( regex_trim_these, '');
 	}
 
+	trim_characters( str, characters_to_remove, leading = true ) {
+
+	}
+
 	get_annotations() {
 		// bracketed segments regex: /\[(?:[^\]\[]+|\[(?:[^\]\[]+|\[[^\]\[]*\])*\])*\]/g
 		var annotations = {};

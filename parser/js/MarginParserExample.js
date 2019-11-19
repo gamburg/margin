@@ -1,24 +1,31 @@
 jQuery( document ).ready(function() {
-    var input_area = jQuery("textarea.input");
-    var output_area = jQuery("textarea.output");
+    var input_area = jQuery('textarea.input');
+    var output_area = jQuery('textarea.output');
+    var ouput_select = jQuery('input[type=radio]');
 
     make_textarea_margin_friendly( input_area );
+    //update_output_on_change( input_area, output_area, input_area, ouput_select );
     
     input_area.on('change keyup paste', function() {
-    	output_area.val( get_converted_text( input_area.val(), "json" ) );
+    	var output_format = get_output_format();
+    	output_area.val( get_converted_text( input_area.val(), output_format ) );
 	}).triggerHandler('change');
 
+	ouput_select.on('change', function() {
+		var output_format = get_output_format();
+		output_area.val( get_converted_text( input_area.val(), output_format ) );
+	});
 });
+
+function get_output_format() {
+	return document.querySelector('input[name="output"]:checked').value;
+}
 
 function get_converted_text( input_text, output_format ) {
 	var sampleTree = new MarginTree();
 	var root = sampleTree.parse( get_margin_item(input_text) );
-
-	return JSON.stringify(root.model, null, 5);
+	return convert_margin( root, output_format );
 }
-
-
-
 
 function make_textarea_margin_friendly( textarea ) {
     enable_tab_in_textarea( textarea );
