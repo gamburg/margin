@@ -8,18 +8,31 @@ jQuery( document ).ready(function() {
     
     input_area.on('change keyup paste', function() {
     	var output_format = get_output_format();
-    	console.log(get_converted_text( input_area.val(), output_format ));
-    	output_area.html( get_converted_text( input_area.val(), output_format ) );
+    	var display_format = get_display_format();
+    	if( display_format === 'html' ) {
+    		output_area.html( get_converted_text( input_area.val(), output_format ) );
+    	} else {
+    		output_area.text( get_converted_text( input_area.val(), output_format ) );
+    	}	
 	}).triggerHandler('change');
 
 	ouput_select.on('change', function() {
 		var output_format = get_output_format();
-		output_area.html( get_converted_text( input_area.val(), output_format ) );
+		var display_format = get_display_format();
+    	if( display_format === 'html' ) {
+    		output_area.html( get_converted_text( input_area.val(), output_format ) );
+    	} else {
+    		output_area.text( get_converted_text( input_area.val(), output_format ) );
+    	}
 	});
 });
 
 function get_output_format() {
 	return document.querySelector('input[name="output"]:checked').value;
+}
+
+function get_display_format() {
+	return document.querySelector('input[name="output"]:checked').dataset.display;
 }
 
 function get_converted_text( input_text, output_format ) {
