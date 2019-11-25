@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Lab Mono';
+  src:  url('../assets/fonts/labmono-regular-web.woff2') format('woff2'),
+  url('../assets/fonts/labmono-regular-web.woff') format('woff');
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Lab Mono', 'Courier', monospace;
+  margin: 0;
+}
+
+.input, .output {
+  font-family: inherit;
+  font-size: .8em;
+  height: 100%;
+  width: 100%;
+
+  padding: 2em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  border: none;
+  outline: none;
+
+  -moz-tab-size : 4;
+  -o-tab-size : 4;
+  tab-size : 4;
+}
+
+.input {
+  float: left;
+  cursor:text;
+}
+
+.output {
+  float: right;
+  white-space: pre;
+  overflow: scroll;
+}
+
+input[type="radio"]:checked+label {
+  font-weight: bold;
+}
+
+h2 {
+  font-size:1.1em;
+  font-weight: inherit;
+}
+
+.light {
+  background: #f6f5f5;
+  color: #33313b;
+}
+
+.dark {
+  background: #33313b;
+  color: #f6f5f5;
+}
+
+div {
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+}

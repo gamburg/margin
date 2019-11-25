@@ -22,6 +22,10 @@ class MarginItem {
 
 	}
 
+	get_annotation( key ) {
+
+	}
+
 	get_annotations() {
 		// bracketed segments regex: /\[(?:[^\]\[]+|\[(?:[^\]\[]+|\[[^\]\[]*\])*\])*\]/g
 		var annotations = {};

@@ -1,111 +1,37 @@
 <!doctype html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
+  <head>
+    <meta charset="utf-8">
+    <title>Try Margin</title>
+    <meta name="theme-color" content="#fafafa">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
 
-  <meta name="theme-color" content="#fafafa">
-
-  <style>
-
-    @font-face {
-      font-family: 'Lab Mono';
-      src:  url('../assets/fonts/labmono-regular-web.woff2') format('woff2'),
-            url('../assets/fonts/labmono-regular-web.woff') format('woff');
-    }
-
-    html, body {
-      height: 100%;
-      font-family: 'Lab Mono', 'Courier', monospace;
-      margin: 0;
-    }
-
-    .input, .output {
-      font-family: inherit;
-      font-size: .8em;
-      height: 100%;
-      width: 100%;
-
-      padding: 2em;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-
-      border: none;
-      outline: none;
-
-      -moz-tab-size : 4;
-      -o-tab-size : 4;
-      tab-size : 4;
-    }
-
-    .input {
-      float: left;
-    }
-
-    .output {
-      float: right;
-      white-space: pre;
-    }
-
-    input[type="radio"]:checked+label {
-      font-weight: bold;
-    }
-
-    h2 {
-      font-size:1.1em;
-      font-weight: inherit;
-    }
-
-    .light {
-      background: #f6f5f5;
-      color: #33313b;
-    }
-
-    .dark {
-      background: #33313b;
-      color: #f6f5f5;
-    }
-
-    div {
-      display: inline-block;
-      height: 100%;
-      width: 50%;
-    }
-
-  </style>
-
-</head>
-
-<body>
-
-  <div>
-    <h2>Input</h2>
-    <input type="radio" id="shopping_list" name="input" value="shopping_list" checked="checked"><label for="shopping_list">Shopping</label>
-    <textarea class="input light" autofocus>Parent
-   Child
-    Grandchild
-     Great [Grand]c[hi]ld
-   Child</textarea>
-  </div><div>
-    <h2>Output</h2>
-    <input type="radio" id="pretty" name="output" value="pretty" data-display="html" checked="checked" ><label for="pretty">Pretty</label>
-    <input type="radio" id="json" name="output" value="json" data-display="text"><label for="json">JSON</label>
-    <input type="radio" id="markdown" name="output" data-display="text" value="markdown"><label for="markdown">Markdown</label>
-    <div class="output dark"></div>
-  </div>
-  
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/TreeModel.js"></script>
-  <script src="js/MarginParser.js"></script>
-  <script src="js/MarginConverter.js"></script>
-  <script src="js/MarginParserExample.js"></script>
-
-    <script>
-
-  </script>
-  
-</body>
+  <body>
+    <div class="input_wrapper">
+      <h2>Input</h2>
+      <input type="radio" id="shopping" name="input" value="shopping" checked="checked"><label for="shopping">To Do List</label>
+      <input type="radio" id="notes" name="input" value="notes"><label for="notes">Note Taking</label>
+      <input type="radio" id="reading" name="input" value="reading"><label for="reading">Reading App</label>
+      <textarea class="input light" autofocus>Parent
+  Child
+  Grandchild
+   Great [Grand]c[hi]ld
+  Child</textarea>
+    </div><div class="output_wrapper">
+      <h2>Output</h2>
+      <input type="radio" id="pretty" name="output" value="pretty" data-display="html" checked="checked" ><label for="pretty">Pretty</label>
+      <input type="radio" id="json" name="output" value="json" data-display="text"><label for="json">JSON</label>
+      <input type="radio" id="markdown" name="output" data-display="text" value="markdown"><label for="markdown">Markdown</label>
+      <div class="output dark"></div>
+    </div>
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/TreeModel.js"></script>
+    <script src="js/MarginParser.js"></script>
+    <script src="js/MarginConverter.js"></script>
+    <script src="js/MarginParserExample.js"></script>
+  </body>
 
 </html>
