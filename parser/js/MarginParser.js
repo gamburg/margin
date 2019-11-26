@@ -6,7 +6,7 @@ class MarginItem {
 	constructor( parseable_text ) {
 		this.raw_data = get_top_level_text( parseable_text );
 		this.value = this.get_value();
-		this.annotations = this.get_annotations();
+		this.annotations = this.set_annotations();
 		this.children = [];
 		var _this = this; // allows this instance to be visible inside forEach loop
 
@@ -31,11 +31,14 @@ class MarginItem {
 
 	}
 
-	get_annotation( key ) {
-
+	get_annotations( key = false ) {
+		if( !key ) {
+			return this.annotations;
+		}
+		return this.annotations[key];
 	}
 
-	get_annotations() {
+	set_annotations() {
 		// bracketed segments regex: /\[(?:[^\]\[]+|\[(?:[^\]\[]+|\[[^\]\[]*\])*\])*\]/g
 		var annotations = {};
 		var key_value_separator = ':';
@@ -46,7 +49,7 @@ class MarginItem {
 			raw_annotations.forEach(function( raw_annotation ) {
 				var key;
 				var value = null;
-				var raw_annotation_unwrapped = raw_annotation.slice(1,-1); // remove [ & ]
+				var raw_annotation_unwrapped = raw_annotation.slice(1,-1); // remove ] & [
 				var key_value_separator_index = raw_annotation_unwrapped.indexOf( key_value_separator );
 				if( key_value_separator_index < 0 ) { // no annotation separator found
 					key = raw_annotation_unwrapped;
