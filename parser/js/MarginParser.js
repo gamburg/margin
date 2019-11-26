@@ -54,8 +54,17 @@ class MarginItem {
 
 function get_margin_item( text ) {
 	root_text = "root\n";
-	text_tree = root_text.concat( shift_right(text) );
+	clean_text = conform_text_for_parsing( text );
+	text_tree = root_text.concat( shift_right( clean_text ) );
 	return get_margin_item_from_text_tree( text_tree );
+}
+
+function conform_text_for_parsing( text ) {
+	return remove_blank_lines( text );
+}
+
+function remove_blank_lines( text ) {
+	return text.replace(/^\s*[\r\n]/gm, '');
 }
 
 function get_margin_item_from_text_tree( text_tree ) {
