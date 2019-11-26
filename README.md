@@ -212,57 +212,9 @@ Unread:
  - Where the Wild Things Are
 ```
 
-# Examples
+# Try it out
 
-## Note Taking
-```margin
--- 'Typography That Works' --
-     * Course Notes *
-       - Graphic design is all about lining things up (often in a grid)
-          Standard Alignments:
-           * Centered: Formal, symmetrical
-           * Justified: Economical, saves space
-           * Flush Left: Organic feeling
-           * Flush Right: Unusual, lends a dynamism
-       - There should be a self-contained logic to the chosen grid
-       - Multiple ideas should be tested rapidly before layout decisions are made
-  
-     * Assignments *
-       - Project 1 [due: 2019/01/12]
-       - Midterm [due: 2019/02/18]
-       - Final Project [due: 2019/03/14]
-```
-
-## To-Do List
-
-```margin
-Today       [filter: date is today]
-Next 7 days [filter: date is less than 7 days from today]
-
-------
-
-To Do:
-
-  ** Shopping **
-    [x] Groceries
-    [x] Milk
-    [x] Kale
-    [ ] Frozen Fish [Note: Any sort of white fish, not cod]
-
-  ** Projects **
-    Portfolio Website
-      Front-end
-        [ ] Disallow zoom on mobile
-        [ ] Fix homepage grid on mobile
-      Back-end
-        - Wordpress
-          [ ] Update plugins   [date: 2019/07/07]
-        - Server
-          [ ] Renew hosting    [date: 2020/01/07]
-          [ ] Upgrade to PHP 7 [date: 2020/02/14]
-        
-```
-
+The Margin JavaScript parser is currently in alpha. [You can try it out for yourself here](https://margin.love/parser), but note that some functionality defined in this spec will not yet function properly.
 
 # Questions
 
