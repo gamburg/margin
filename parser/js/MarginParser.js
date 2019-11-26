@@ -14,7 +14,7 @@ class MarginItem {
 		// leading characters regex:  /^([-_> ])*/g;
 		// trailing characters regex: /(([-_>* ])+$)/g;
 		// annotations regex = ??????? // <-----TODO
-		var regex_trim_these = /(^([-_>* ])*)|(([-_>* ])+$)/g;
+		var regex_trim_these = /(^([-_>* \t])*)|(([-_>* \t])+$)/g;
 		return this.raw_data.replace( regex_trim_these, '');
 	}
 
