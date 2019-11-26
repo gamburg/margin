@@ -1,6 +1,6 @@
 # Philosophy
 
-Margin is a lightweight markup language for heirarchically structured thought, like notes and to-do lists.
+Margin is a lightweight markup language for hierarchically structured thought, like notes and to-do lists.
 
 Its platform-independent structure is both human and machine readable.
 
@@ -49,7 +49,7 @@ Movies to watch:
    [ ] Inland Empire
 ```
 
-Margin is especially useful for applications that wish to be less prescriptive in their mental models, leaving it to the user to determine how they'd like to interpret the heirarchical structure. 
+Margin is especially useful for applications that wish to be less prescriptive in their mental models, leaving it to the user to determine how they'd like to interpret the hierarchical structure. 
 
 Margin aims to shepherd apps away from the tendency to overcomplicate and over-define.
 
@@ -271,7 +271,7 @@ To Do:
 [TaskPaper](https://www.taskpaper.com) is a great, minimal app for creating to-do lists. Some readers might feel that Margin's capabilities are redundant, but I believe Margin stands apart in several key ways:
 
 - Margin is not an app, but a markup language.
-- Margin is heirarchically less prescriptive than TaskPaper. Where TaskPaper splits items into `projects`, `tasks`, and `notes`, Margin sees only items. A top-level item in Margin *could* be considered a project, but it could also just as easily be considered a list, a note, a task, a chapter, an employee, an index, etc. 
+- Margin is hierarchically less prescriptive than TaskPaper. Where TaskPaper splits items into `projects`, `tasks`, and `notes`, Margin sees only items. A top-level item in Margin *could* be considered a project, but it could also just as easily be considered a list, a note, a task, a chapter, an employee, an index, etc. 
 - Margin is syntactically less prescriptive than [TaskPaper's formatting](https://guide.taskpaper.com/getting-started/). TaskPaper categorizes items by their ornamentation (`projects` end with a colon, `tasks` begin with a dash, and `notes` must not fall into either of those two categories). Margin intentionally avoids such definitions, allowing the user to ornament (or not) plain text in nearly any format they prefer.
 
 **Where can I send feedback?**
