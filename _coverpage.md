@@ -1,9 +1,9 @@
 <!--![logo](assets/img/logo.png)-->
 
-# &#8857;
+> &#8857;
 # Margin
 
-## Lightweight markup designed for an open mind
+> Lightweight markup designed for an open mind
 
 - The plain text language for list-making, note-taking, and to-dos.
 - Allows thinkers to determine their own organizational models.
