@@ -51,12 +51,24 @@ class MarginItem {
 		return annotations;
 	}
 }
+/*
+function get_item_blocks( text ) {
+	var item_blocks = [];
+	var lines = text.split('\n');
 
+	for(var i = 0; i < lines.length; i++) {
+		if( lines[i] ) 
+
+	}
+
+
+}
+*/
 function get_margin_item( text ) {
-	root_text = "root\n";
-	clean_text = conform_text_for_parsing( text );
-	text_tree = root_text.concat( shift_right( clean_text ) );
-	return get_margin_item_from_text_tree( text_tree );
+	var root_text = "root\n";
+	var shifted_text = root_text.concat( shift_right( text ) );
+	var parseable_text = conform_text_for_parsing( shifted_text );
+	return get_margin_item_from_parseable_text( parseable_text );
 }
 
 function conform_text_for_parsing( text ) {
@@ -67,13 +79,13 @@ function remove_blank_lines( text ) {
 	return text.replace(/^\s*[\r\n]/gm, '');
 }
 
-function get_margin_item_from_text_tree( text_tree ) {
+function get_margin_item_from_parseable_text( text_tree ) {
 	var item = new MarginItem( get_top_level_text( text_tree ) );
 
 	var child_text_trees = get_child_text_trees( text_tree );
 
 	child_text_trees.forEach(function(child_text) {
-		var child_item = get_margin_item_from_text_tree( child_text );
+		var child_item = get_margin_item_from_parseable_text( child_text );
 		item.children.push( child_item );
 	});
 
