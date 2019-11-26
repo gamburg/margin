@@ -11,6 +11,7 @@
 
 <!--[GitHub &#8594;](https://github.com/gamburg/margin/)-->
 [Learn Margin &#8594;](#philosophy)
+[Try Margin &#8594;](/parser)
 
 <!-- background color -->
 
