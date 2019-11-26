@@ -40,13 +40,37 @@ html, body {
   overflow: scroll;
 }
 
+header {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em 2em;
+}
+
 input[type="radio"]:checked+label {
-  font-weight: bold;
+  text-decoration: underline;
+}
+
+input[type="radio"]+label {
+  font-size: .9em;
+  padding: 0 .5em 0 .2em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]+label {
+  cursor: pointer;
 }
 
 h2 {
-  font-size:1.1em;
-  font-weight: inherit;
+  font-size:2em;
+  font-weight: bold;
+  margin-top: .4em;
+  margin-bottom: .5em;
 }
 
 .light {
