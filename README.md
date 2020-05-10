@@ -226,6 +226,10 @@ The Margin JavaScript parser is currently in alpha. [You can try it out for your
 - Margin is hierarchically less prescriptive than TaskPaper. Where TaskPaper splits items into `projects`, `tasks`, and `notes`, Margin sees only items. A top-level item in Margin *could* be considered a project, but it could also just as easily be considered a list, a note, a task, a chapter, an employee, an index, etc. 
 - Margin is syntactically less prescriptive than [TaskPaper's formatting](https://guide.taskpaper.com/getting-started/). TaskPaper categorizes items by their ornamentation (`projects` end with a colon, `tasks` begin with a dash, and `notes` must not fall into either of those two categories). Margin intentionally avoids such definitions, allowing the user to ornament (or not) plain text in nearly any format they prefer.
 
+**Indentation? Human readable? Won’t a complicated Margin document just end up as a jumbled mess of deeply indented text blocks and annotations?**
+
+Margin isn’t meant for storing complex databases. It’s meant to make text-based structured thought portable and platform independent. In the same way that Markdown is built to translate into HTML, but you wouldn’t build a web app in markdown, so too Margin has its limitations. The idea is to de-formalize any unnecessary syntactic requirements, leaving only indentations and a select number of special operators to dictate the parsing of the language. Keeping it simple has its benefits, but it also has its costs. 
+
 **Where can I send feedback?**
 
 Please submit any feedback as an issue on [Margin's public GitHub repository](https://github.com/gamburg/margin/issues).
