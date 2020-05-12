@@ -167,7 +167,7 @@ Restaurant Staff
   Steven [waiter]
   Jessica [host]
 ```
-An annotation whose type is not understood by the interpreting application may safely be ignored.
+An annotation whose type is not understood by the interpreting application may safely be ignored (but should not be discarded).
 ```margin
 [For example: this annotation won't be utilized unless the app has an interpreter for type "For example".]
 ```
