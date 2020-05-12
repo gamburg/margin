@@ -192,7 +192,7 @@ Daily Rituals
 ### Indexes
 An index is any item that parents an annotation of type `filter`:
 ```margin
-Now Playing [filter: release date is before today]
+Now Playing [filter: release date is before tomorrow]
 Coming Soon [filter: release date is after today]
 ```
 An application may use the specified query to filter for certain nodes under certain conditions of interaction. For most applications, the default filter for a given task (when no filter is specified) would be that task's children. But this is outside the scope of the markup language itself.
