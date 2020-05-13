@@ -2,7 +2,7 @@
 
 Margin is a lightweight markup language for hierarchically structured thought, like notes and to-do lists.
 
-Its platform-independent structure is both human and machine readable.
+Its platform-independent structure is both human- and machine-readable.
 
 This means that Margin can thrive within any plain text editor, and on any hardware -- even paper.
 
@@ -31,7 +31,7 @@ Favorite Movies:
 
 This allows the thinker to adopt whatever visual grammar they prefer.
 
-Items can also be assigned arbitrary [**annotations**](#annotations), which can store meta-data:
+Items can also be assigned arbitrary [**annotations**](#annotations), which can store meta data:
 
 ```margin
 Favorite Movies
@@ -40,7 +40,7 @@ Favorite Movies
    Adaptation [year: 2002]
 ```
 
-Annotations can also signal how items should be interpreted, eg. as tasks:
+Annotations can also signal how items should be interpreted, e.g. as tasks:
 
 ```margin
 Movies to watch:
@@ -49,10 +49,9 @@ Movies to watch:
    [ ] Inland Empire
 ```
 
-Margin is especially useful for applications that wish to be less prescriptive in their mental models, leaving it to the user to determine how they'd like to interpret the hierarchical structure. 
+Margin is especially useful for applications that wish to be less prescriptive in their mental models, leaving it to the user to determine how they'd like to interpret the hierarchical structure.
 
 Margin aims to shepherd apps away from the tendency to overcomplicate and over-define.
-
 
 ### Points of frustration that led to Margin {docsify-ignore}
 
@@ -71,7 +70,7 @@ it can lead to frustration. For example:
 
 I use and love all of the above applications. Their specialization is their strength. Margin's philosophy simply asserts that there is space for a more adaptable standard for stuctured thought.
 
-In this respect, Margin promotes a common sense approach to modeling thought: simply place the thinker's preferences first. 
+In this respect, Margin promotes a common sense approach to modeling thought: simply place the thinker's preferences first.
 
 This approach begins with a flexible plain text standard. After that, it is the application's job to improve the thinker's experience through specialized tools and prescriptive user-facing models -- as long as the underlying source material remains portable and human-readable.
 
@@ -85,14 +84,14 @@ Margin employs an ordered tree data structure whose nodes are called items. Inde
 
 ## Items
 
-Each line represents an item.
+Each line represents an item:
 
 ```margin
 Shirt
 Pants
 Shoes
 ```
-Each item can have a single parent, and multiple children. Indentation alone determines this hierarchy:
+Each item can have a single parent and multiple children. Indentation alone determines this hierarchy:
 ```margin
 Shirt
   Collar
@@ -118,7 +117,7 @@ Leading & trailing dashes, colons, asterisks, chevrons, underscores and whitespa
 
 An annotation is any childless item wrapped in square brackets:
 ```margin
-I'm a plain old item 
+I'm a plain old item
    [and I'm an annotation]
 ```
 Annotations can be used to store meta data:
@@ -128,7 +127,7 @@ The Crying of Lot 49
    [publication year: 1966]
    [publisher: J. B. Lippincott & Co.]
 ```
-An annotation is the child of any inline, non-annotation item.
+An annotation is the child of any inline, non-annotation item:
 ```margin
 Items:
   - Item A
@@ -144,7 +143,7 @@ Items:
   - [I belong to Item Z]
   		Item Z
 ```
-Escape an annotation with a backslash
+Escape an annotation with a backslash:
 ```margin
 This is an item \[but this is not an annotation]
 ```
@@ -167,11 +166,11 @@ Restaurant Staff
   Steven [waiter]
   Jessica [host]
 ```
-An annotation whose type is not understood by the interpreting application may safely be ignored (but should not be discarded).
+An annotation whose type is not understood by the interpreting application may safely be ignored (but should not be discarded):
 ```margin
 [For example: this annotation won't be utilized unless the app has an interpreter for type "For example".]
 ```
-An annotation cannot be nested 
+An annotation cannot be nested:
 ```margin
 [This entire sentence [including this text] represents a single annotation]
 ```
@@ -181,7 +180,7 @@ An annotation cannot be nested
 While there are no hard-and-fast rules about how items should be interpreted, the following are good guidelines for most applications.
 
 ### Tasks
-A task is any item that parents an annotation of type `x` or `empty string`.
+A task is any item that parents an annotation of type `x` or `empty string`:
 ```margin
 Daily Rituals
   [x] Meditate
@@ -223,12 +222,12 @@ The Margin JavaScript parser is currently in alpha. [You can try it out for your
 [TaskPaper](https://www.taskpaper.com) is a great, minimal app for creating to-do lists. Some readers might feel that Margin's capabilities are redundant, but I believe Margin stands apart in several key ways:
 
 - Margin is not an app, but a markup language.
-- Margin is hierarchically less prescriptive than TaskPaper. Where TaskPaper splits items into `projects`, `tasks`, and `notes`, Margin sees only items. A top-level item in Margin *could* be considered a project, but it could also just as easily be considered a list, a note, a task, a chapter, an employee, an index, etc. 
+- Margin is hierarchically less prescriptive than TaskPaper. Where TaskPaper splits items into `projects`, `tasks`, and `notes`, Margin sees only items. A top-level item in Margin *could* be considered a project, but it could also just as easily be considered a list, a note, a task, a chapter, an employee, an index, etc.
 - Margin is syntactically less prescriptive than [TaskPaper's formatting](https://guide.taskpaper.com/getting-started/). TaskPaper categorizes items by their ornamentation (`projects` end with a colon, `tasks` begin with a dash, and `notes` must not fall into either of those two categories). Margin intentionally avoids such definitions, allowing the user to ornament (or not) plain text in nearly any format they prefer.
 
-**Indentation? Human readable? Won’t a complicated Margin document just end up as a jumbled mess of deeply indented text blocks and annotations?**
+**Indentation? Human-readable? Won't a complicated Margin document just end up as a jumbled mess of deeply indented text blocks and annotations?**
 
-Margin isn’t meant for storing complex databases. It’s meant to make text-based structured thought portable and platform independent. In the same way that Markdown is built to translate into HTML, but you wouldn’t build a web app in markdown, so too Margin has its limitations. The idea is to de-formalize any unnecessary syntactic requirements, leaving only indentations and a select number of special operators to dictate the parsing of the language. Keeping it simple has its benefits, but it also has its costs. 
+Margin isn't meant for storing complex databases. It's meant to make text-based structured thought portable and platform-independent. In the same way that Markdown is built to translate into HTML, but you wouldn't build a web app in Markdown, so Margin too has its limitations. The idea is to de-formalize any unnecessary syntactic requirements, leaving only indentations and a select number of special operators to dictate the parsing of the language. Keeping it simple has its benefits, but it also has its costs.
 
 **Where can I send feedback?**
 
