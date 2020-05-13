@@ -215,6 +215,11 @@ Unread:
 
 The Margin JavaScript parser is currently in alpha. [You can try it out for yourself here](https://margin.love/parser), but note that some functionality defined in this spec will not yet function properly.
 
+# Implementations
+
+- This repo contains the original Javascript implementation.
+- [MarginRB](https://github.com/burlesona/margin-rb) - Ruby implementation by @burlesona
+
 # Questions
 
 **Why not TaskPaper?**
