@@ -4,10 +4,7 @@
         url('assets/fonts/labmono-regular-web.woff') format('woff');
 }
 
-
-
 body {
-
 	font-family: 'Lab Mono', 'Courier', monospace;
 }
 
@@ -29,4 +26,17 @@ section.cover .cover-main > p:last-child a:last-child {
 
 section.cover ul {
 	max-width: none;
+}
+
+.markdown-section ul,
+.markdown-section ol {
+	padding-left: 0;
+}
+
+.markdown-section ul {
+	margin-left: -10px;
+}
+
+.markdown-section ul li {
+	padding-left: 10px;
 }
