@@ -112,7 +112,7 @@ Leading & trailing dashes, colons, asterisks, chevrons, underscores and whitespa
          - Help structure your thinking
          - Make your plain text documents more easily scannable
 ```
-The full list of leading & trailing characters that Margin ignores can be found <a href="/ignored_characters.txt">here</a>.
+[See the list of all ignored characters.](/ignored_characters.txt)
 
 ## Annotations
 
