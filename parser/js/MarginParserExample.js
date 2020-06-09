@@ -72,7 +72,7 @@ var input_samples = [
 	},
 	{
 		name: 'notes',
-		data: '\'Typograpy That Works\'\n\n\t Course Notes\n\t\tGraphic design is all about lining things up (often in a grid)\n\t\tStandard Alignments\n\t\t\t> Centered: Formal, symmetrical\n\t\t\t> Justified: Economical, saves space\n\t\t\t> Flush Left: Organic\n\t\t\t> Flush Right: Unusual, lends a dynamism\n\t\tThere should be a self-contained logic to the chosen grid\n\t\tMultiple layout ideas should be tested rapidly\n\n\tClass Assignments\n\t\t- Project 1 [due: 2019/01/12]\n\t\t- Midterm [due: 2019/02/18]\n\t\t- Final Project [due: 2019/03/14]'
+		data: '\'Typograpy That Works\'\n\n\tCourse Notes\n\t\tGraphic design is all about lining things up (often in a grid)\n\t\tStandard Alignments\n\t\t\t> Centered: Formal, symmetrical\n\t\t\t> Justified: Economical, saves space\n\t\t\t> Flush Left: Organic\n\t\t\t> Flush Right: Unusual, lends a dynamism\n\t\tThere should be a self-contained logic to the chosen grid\n\t\tMultiple layout ideas should be tested rapidly\n\n\tClass Assignments\n\t\t- Project 1 [due: 2019/01/12]\n\t\t- Midterm [due: 2019/02/18]\n\t\t- Final Project [due: 2019/03/14]'
 	},
 	{
 		name: 'reading',
