@@ -235,6 +235,10 @@ The Margin JavaScript parser is currently in alpha. [You can try it out for your
 
 Margin isn't meant for storing complex databases. It's meant to make text-based structured thought portable and platform-independent. In the same way that Markdown is built to translate into HTML, but you wouldn't build a web app in Markdown, so Margin too has its limitations. The idea is to de-formalize any unnecessary syntactic requirements, leaving only indentations and a select number of special operators to dictate the parsing of the language. Keeping it simple has its benefits, but it also has its costs.
 
+**What is the preferred extension for Margin files?**
+
+Margin files use the extension `.margin`.
+
 **Where can I send feedback?**
 
 Please submit any feedback as an issue on [Margin's public GitHub repository](https://github.com/gamburg/margin/issues).
