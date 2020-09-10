@@ -239,6 +239,10 @@ Margin isn't meant for storing complex databases. It's meant to make text-based 
 
 Margin files use the extension `.margin`.
 
+**Does Margin support multi-line items?**
+
+No. But if you're writing in Margin and you really want items to span multiple lines, feel free to use whatever syntax appeals to you to acheive that. Margin certainly doesn't care what you do in the privacy of your own plain text editor. Just don't expect those multi-line items to be interpreted properly by a given application.
+
 **Where can I send feedback?**
 
 Please submit any feedback as an issue on [Margin's public GitHub repository](https://github.com/gamburg/margin/issues).
