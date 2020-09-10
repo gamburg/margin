@@ -189,6 +189,20 @@ Daily Rituals
   [ ] Read for 10 minutes
 ```
 
+### Links
+An annotation of type `http` or `https` represents a link:
+```margin
+Some people choose to set their homepage to [http://www.google.com].
+```
+Text to the left of the annotation not separated by an `empty string` is the link's label:
+```margin
+I rarely use Yahoo[http://www.yahoo.com] for search anymore.
+```
+For multi-word labels, wrap the entire label in parentheses:
+```margin
+Sometimes I do read (Yahoo News)[https://news.yahoo.com], though.
+```
+
 ### Indexes
 An index is any item that parents an annotation of type `filter`:
 ```margin
