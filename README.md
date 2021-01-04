@@ -112,7 +112,7 @@ Leading & trailing dashes, colons, asterisks, chevrons, underscores and whitespa
          - Help structure your thinking
          - Make your plain text documents more easily scannable
 ```
-[See the list of all ignored characters.](/ignored_characters.txt)
+[See the list of all ignored characters.](ignored_characters.txt)
 
 ## Annotations
 
